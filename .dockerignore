@@ -1,0 +1,9 @@
+node_modules
+dist
+.vite
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+.git
+.DS_Store
+.env
