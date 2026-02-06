@@ -1,0 +1,29 @@
+/* Base text defaults */
+html {
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: -0.02em;
+}
+
+/* Editorial helpers */
+.text-balance {
+  text-wrap: balance;
+}
+
+.prose-tight p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Muted text helpers */
+.text-muted {
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,20 @@
+@theme {
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+
+  /* Brand / accent */
+  --color-brand-500: oklch(0.68 0.14 250);
+  --color-brand-600: oklch(0.62 0.15 250);
+
+  /* Surface */
+  --color-bg: #09090b; /* zinc-950 */
+  --color-surface: #0f0f14;
+  --color-border: #27272a; /* zinc-800 */
+
+  /* Text */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+}

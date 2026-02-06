@@ -626,6 +626,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@formspree/core@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@formspree/core@npm:4.0.0"
+  dependencies:
+    "@stripe/stripe-js": "npm:^5.7.0"
+  checksum: 10c0/632f6f29d64a41c12918cf95700ae63b362f21975cfb42ac81ba8aa89e5dbaa7b528143635cabdb0df1a345f94202e9bd52321baf95f8033a2f427fc3c747743
+  languageName: node
+  linkType: hard
+
+"@formspree/react@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@formspree/react@npm:3.0.0"
+  dependencies:
+    "@formspree/core": "npm:^4.0.0"
+    "@stripe/react-stripe-js": "npm:^3.1.1"
+    "@stripe/stripe-js": "npm:^5.7.0"
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0
+    react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0
+  checksum: 10c0/b3426928f770a82ebfdae94bd33abb47f8589afb3b7ecdcb46739cc283459ca676be99251d5024c4c446a85b9e95826e1acafa2c532193559205950993edf561
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -945,6 +968,26 @@ __metadata:
   version: 1.1.0
   resolution: "@standard-schema/spec@npm:1.1.0"
   checksum: 10c0/d90f55acde4b2deb983529c87e8025fa693de1a5e8b49ecc6eb84d1fd96328add0e03d7d551442156c7432fd78165b2c26ff561b970a9a881f046abb78d6a526
+  languageName: node
+  linkType: hard
+
+"@stripe/react-stripe-js@npm:^3.1.1":
+  version: 3.10.0
+  resolution: "@stripe/react-stripe-js@npm:3.10.0"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@stripe/stripe-js": ">=1.44.1 <8.0.0"
+    react: ">=16.8.0 <20.0.0"
+    react-dom: ">=16.8.0 <20.0.0"
+  checksum: 10c0/d7629436629571883e1ab44b1fdbdd5bc002c9020400bbad212caccddad5eaedefbdb171e970bd34276b72d9c23deac86d1e0898db11961de2a7e8951bf9711a
+  languageName: node
+  linkType: hard
+
+"@stripe/stripe-js@npm:^5.7.0":
+  version: 5.10.0
+  resolution: "@stripe/stripe-js@npm:5.10.0"
+  checksum: 10c0/0309007baaf939931de0e18ec8230bdfa41b1644cd5f65d72168ef0a05ea4d14da9a95ff628c94f9f1e222577296369b7490534803ce1ce18d08a557ae562644
   languageName: node
   linkType: hard
 
@@ -2220,6 +2263,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^12.33.0":
+  version: 12.33.0
+  resolution: "framer-motion@npm:12.33.0"
+  dependencies:
+    motion-dom: "npm:^12.33.0"
+    motion-utils: "npm:^12.29.2"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/c8b1d628c98763f784a039897727709a1bccfad53d1cf2d58656c3bd2b79934b66d8b41981b0109799cf5c5953812f32027e6bc5748637648e360b1d647583ad
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
   resolution: "fs-minipass@npm:3.0.3"
@@ -2439,7 +2504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-tokens@npm:^4.0.0":
+"js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
   checksum: 10c0/e248708d377aa058eacf2037b07ded847790e6de892bbad3dac0abba2e759cb9f121b00099a65195616badcb6eca8d14d975cb3e89eb1cfda644756402c8aeed
@@ -2684,6 +2749,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"loose-envify@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "loose-envify@npm:1.4.0"
+  dependencies:
+    js-tokens: "npm:^3.0.0 || ^4.0.0"
+  bin:
+    loose-envify: cli.js
+  checksum: 10c0/655d110220983c1a4b9c0c679a2e8016d4b67f6e9c7b5435ff5979ecdb20d0813f4dec0a08674fcbdd4846a3f07edbb50a36811fd37930b94aaa0d9daceb017e
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0, lru-cache@npm:^11.2.1, lru-cache@npm:^11.2.4, lru-cache@npm:^11.2.5":
   version: 11.2.5
   resolution: "lru-cache@npm:11.2.5"
@@ -2854,6 +2930,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion-dom@npm:^12.33.0":
+  version: 12.33.0
+  resolution: "motion-dom@npm:12.33.0"
+  dependencies:
+    motion-utils: "npm:^12.29.2"
+  checksum: 10c0/1155014069e92fd3e975b47a8d3ec5dd63c4ef095561fdc12127890548101c41ee93b1fc3498948a7ee6035b46e3ac7244d66acd3c45899b9e0a85aea92ea0e9
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^12.29.2":
+  version: 12.29.2
+  resolution: "motion-utils@npm:12.29.2"
+  checksum: 10c0/8058fbb3467602e8263a8a6df0e5d318d00d30d7148415d2ebc13c78a3c7a1b0cbec0808bb62e82c34714979ecbed15b9fffb91bde654dbf3602c84b7d66a5b6
+  languageName: node
+  linkType: hard
+
+"motion@npm:^12.33.0":
+  version: 12.33.0
+  resolution: "motion@npm:12.33.0"
+  dependencies:
+    framer-motion: "npm:^12.33.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/a858cc2961ab6d402967b758958395bbc841e136aa10b8e5136252ec01a95cc986a2894a034b708a9e01f83c9d876e14739067e209edbe860b342c96e9877990
+  languageName: node
+  linkType: hard
+
 "ms@npm:^2.1.3":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
@@ -2919,6 +3032,13 @@ __metadata:
   bin:
     nopt: bin/nopt.js
   checksum: 10c0/1822eb6f9b020ef6f7a7516d7b64a8036e09666ea55ac40416c36e4b2b343122c3cff0e2f085675f53de1d2db99a2a89a60ccea1d120bcd6a5347bf6ceb4a7fd
+  languageName: node
+  linkType: hard
+
+"object-assign@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "object-assign@npm:4.1.1"
+  checksum: 10c0/1f4df9945120325d041ccf7b86f31e8bcc14e73d29171e37a7903050e96b81323784ec59f93f102ec635bcf6fa8034ba3ea0a8c7e69fa202b87ae3b6cec5a414
   languageName: node
   linkType: hard
 
@@ -3066,6 +3186,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.7.2":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: "npm:^1.4.0"
+    object-assign: "npm:^4.1.1"
+    react-is: "npm:^16.13.1"
+  checksum: 10c0/59ece7ca2fb9838031d73a48d4becb9a7cc1ed10e610517c7d8f19a1e02fa47f7c27d557d8a5702bec3cfeccddc853579832b43f449e54635803f277b1c78077
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0, punycode@npm:^2.3.1":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
@@ -3081,6 +3212,13 @@ __metadata:
   peerDependencies:
     react: ^19.2.4
   checksum: 10c0/f0c63f1794dedb154136d4d0f59af00b41907f4859571c155940296808f4b94bf9c0c20633db75b5b2112ec13d8d7dd4f9bf57362ed48782f317b11d05a44f35
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^16.13.1":
+  version: 16.13.1
+  resolution: "react-is@npm:16.13.1"
+  checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
   languageName: node
   linkType: hard
 
@@ -3155,6 +3293,7 @@ __metadata:
   resolution: "resume-portfolio@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.39.1"
+    "@formspree/react": "npm:^3.0.0"
     "@tailwindcss/vite": "npm:^4.1.18"
     "@testing-library/jest-dom": "npm:^6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -3169,6 +3308,7 @@ __metadata:
     globals: "npm:^16.5.0"
     jsdom: "npm:^28.0.0"
     lucide-react: "npm:^0.563.0"
+    motion: "npm:^12.33.0"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
     react-router-dom: "npm:^7.0.0"
