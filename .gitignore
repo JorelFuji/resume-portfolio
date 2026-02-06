@@ -1,24 +1,25 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# Dependencies
 node_modules
-dist
-dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Builds
+dist
+.vite
+
+# Env
+.env
+.env.*
+
+# OS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Editor / local history
+.history/
+.vscode/
+
+# Yarn (Berry/4) + PnP artifacts
+.pnp.*
+.yarn/install-state.gz
+.yarn/unplugged/
+
+# Logs
+*.log
