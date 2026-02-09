@@ -3229,7 +3229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^7.0.0":
+"react-router-dom@npm:^7.13.0":
   version: 7.13.0
   resolution: "react-router-dom@npm:7.13.0"
   dependencies:
@@ -3311,7 +3311,7 @@ __metadata:
     motion: "npm:^12.33.0"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-router-dom: "npm:^7.0.0"
+    react-router-dom: "npm:^7.13.0"
     tailwindcss: "npm:^4.1.18"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.46.0"

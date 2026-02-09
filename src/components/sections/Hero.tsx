@@ -2,15 +2,17 @@ import { motion, type Variants } from 'framer-motion'
 import Section from '../layout/Section'
 import Badge from '../ui/Badge'
 import profilePhoto from '../../assets/images/profile-photo.webp'
+import type { Lang } from '../../types/i18n'
+
+type Props = {
+  lang: Lang
+}
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 }
 
@@ -19,10 +21,7 @@ const itemVariants: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5,
-      ease: 'easeOut', // ✅ typed correctly via Variants
-    },
+    transition: { duration: 0.5, ease: 'easeOut' },
   },
 }
 
@@ -32,16 +31,21 @@ const photoVariants: Variants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: {
-      type: 'spring',
-      damping: 15,
-      stiffness: 100,
-      delay: 0.4,
-    },
+    transition: { type: 'spring', damping: 15, stiffness: 100, delay: 0.4 },
   },
 }
 
-export default function Hero() {
+export default function Hero({ lang }: Props) {
+  const headline = lang === 'ja' ? 'メルビン・スピラー' : 'Melvin Spiller'
+  const subline =
+    lang === 'ja'
+      ? 'シニア・プラットフォームエンジニア • 創業者 / コンサルタント（Osaka Oaks LLC）'
+      : 'Senior Platform Engineer • Founder & Principal Consultant (Osaka Oaks LLC)'
+  const blurb =
+    lang === 'ja'
+      ? 'アイデンティティ中心のプラットフォーム設計、セキュアなクラウド刷新、そして自動化されたデリバリーを、政府・規制環境で実装。'
+      : 'Identity-first platform engineering, secure cloud modernization, and automation-driven delivery across federal and regulated environments.'
+
   return (
     <div id="top">
       <Section className="pt-12 sm:pt-16">
@@ -51,7 +55,6 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {/* Left: Copy with staggered items */}
           <div className="space-y-6">
             <motion.div variants={itemVariants} className="flex flex-wrap gap-2">
               <Badge>SDVOSB</Badge>
@@ -62,23 +65,14 @@ export default function Hero() {
 
             <motion.div variants={itemVariants} className="space-y-3">
               <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                Melvin Spiller
+                {headline}
               </h1>
-              <p className="text-lg sm:text-xl text-zinc-300">
-                Senior Platform Engineer • Founder & Principal Consultant (Osaka Oaks LLC)
-              </p>
-              <p className="max-w-3xl text-zinc-400 leading-relaxed">
-                Identity-first platform engineering, secure cloud modernization, and automation-driven delivery
-                across federal and regulated environments.
-              </p>
+              <p className="text-lg sm:text-xl text-zinc-300">{subline}</p>
+              <p className="max-w-3xl text-zinc-400 leading-relaxed">{blurb}</p>
             </motion.div>
           </div>
 
-          {/* Right: Photo with spring entrance */}
-          <motion.div
-            className="justify-self-center lg:justify-self-end"
-            variants={photoVariants}
-          >
+          <motion.div className="justify-self-center lg:justify-self-end" variants={photoVariants}>
             <div className="relative group">
               <div className="absolute -inset-3 rounded-3xl bg-blue-500/10 blur-2xl group-hover:bg-blue-500/20 transition-all duration-500" />
               <img
