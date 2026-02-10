@@ -1,10 +1,12 @@
+// src/main.tsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
+import './index.css'
+import './i18n' // ✅ initialize i18next once
 import App from './App'
 import { ErrorBoundary } from './ErrorBoundary'
-import './index.css'
 
 const rootElement = document.getElementById('root')
 

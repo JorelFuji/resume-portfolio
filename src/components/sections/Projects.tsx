@@ -29,20 +29,20 @@ export default function Projects({ lang = 'en' }: Props) {
                   <img
                     src={p.media.src}
                     alt={p.media.alt ?? p.title}
-                    className="h-[260px] w-full object-cover sm:h-[320px]"
+                    className="h-65 w-full object-cover sm:h-80"
                     loading="lazy"
                   />
                 ) : p.media?.type === 'video' ? (
                   <video
                     src={p.media.src}
-                    className="h-[260px] w-full object-cover sm:h-[320px]"
+                    className="h-65 w-full object-cover sm:h-80"
                     muted
                     playsInline
                     autoPlay
                     loop
                   />
                 ) : (
-                  <div className="h-[260px] w-full bg-zinc-900/40 sm:h-[320px]" />
+                  <div className="h-65 w-full bg-zinc-900/40 sm:h-80" />
                 )}
 
                 {/* Overlay */}

@@ -1,12 +1,10 @@
+// src/components/sections/Hero.tsx
+import { useTranslation } from 'react-i18next'
 import { motion, type Variants } from 'framer-motion'
+
 import Section from '../layout/Section'
 import Badge from '../ui/Badge'
 import profilePhoto from '../../assets/images/profile-photo.webp'
-import type { Lang } from '../../types/i18n'
-
-type Props = {
-  lang: Lang
-}
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -31,20 +29,12 @@ const photoVariants: Variants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { type: 'spring', damping: 15, stiffness: 100, delay: 0.4 },
+    transition: { type: 'spring', damping: 15, stiffness: 100, delay: 0.35 },
   },
 }
 
-export default function Hero({ lang }: Props) {
-  const headline = lang === 'ja' ? 'メルビン・スピラー' : 'Melvin Spiller'
-  const subline =
-    lang === 'ja'
-      ? 'シニア・プラットフォームエンジニア • 創業者 / コンサルタント（Osaka Oaks LLC）'
-      : 'Senior Platform Engineer • Founder & Principal Consultant (Osaka Oaks LLC)'
-  const blurb =
-    lang === 'ja'
-      ? 'アイデンティティ中心のプラットフォーム設計、セキュアなクラウド刷新、そして自動化されたデリバリーを、政府・規制環境で実装。'
-      : 'Identity-first platform engineering, secure cloud modernization, and automation-driven delivery across federal and regulated environments.'
+export default function Hero() {
+  const { t } = useTranslation()
 
   return (
     <div id="top">
@@ -64,21 +54,30 @@ export default function Hero({ lang }: Props) {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                {headline}
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                {t('hero_title')}
               </h1>
-              <p className="text-lg sm:text-xl text-zinc-300">{subline}</p>
-              <p className="max-w-3xl text-zinc-400 leading-relaxed">{blurb}</p>
+
+              <p className="text-lg text-zinc-300 sm:text-xl">
+                {t('hero_role')}
+              </p>
+
+              <p className="max-w-3xl leading-relaxed text-zinc-400">
+                {t('hero_desc')}
+              </p>
             </motion.div>
           </div>
 
-          <motion.div className="justify-self-center lg:justify-self-end" variants={photoVariants}>
-            <div className="relative group">
-              <div className="absolute -inset-3 rounded-3xl bg-blue-500/10 blur-2xl group-hover:bg-blue-500/20 transition-all duration-500" />
+          <motion.div
+            className="justify-self-center lg:justify-self-end"
+            variants={photoVariants}
+          >
+            <div className="group relative">
+              <div className="absolute -inset-3 rounded-3xl bg-blue-500/10 blur-2xl transition-all duration-500 group-hover:bg-blue-500/20" />
               <img
                 src={profilePhoto}
-                alt="Melvin Spiller"
-                className="relative h-40 w-40 sm:h-48 sm:w-48 rounded-3xl object-cover border border-zinc-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                alt={t('hero_title')}
+                className="relative h-40 w-40 rounded-3xl border border-zinc-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] sm:h-48 sm:w-48"
                 loading="eager"
               />
             </div>
