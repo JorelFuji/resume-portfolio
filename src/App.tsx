@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react'
 import { Routes, Route, useNavigate, useParams, Navigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-import Navbar from './components/layout/Navbar'
+import Navbar from './components/navigation/Navbar'
 import Footer from './components/layout/Footer'
 
 import Hero from './components/sections/Hero'

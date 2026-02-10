@@ -1,0 +1,35 @@
+@import "./typography.css";
+@import "./utilities.css";
+
+:root {
+  /* Radii */
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  /* Tokens (HSL for Tailwind mapping) */
+  --color-primary: 250 90% 60%;
+  --color-accent: 35 90% 55%;
+  --color-surface: 240 10% 10%;
+  --color-text: 0 0% 96%;
+  --color-muted: 240 5% 70%;
+  --color-border: 240 6% 20%;
+}
+
+/* Light mode option */
+[data-theme="light"] {
+  --color-surface: 0 0% 100%;
+  --color-text: 240 10% 10%;
+  --color-muted: 240 5% 40%;
+  --color-border: 240 6% 85%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: hsl(var(--color-surface));
+  color: hsl(var(--color-text));
+  font-family: Inter, system-ui, sans-serif;
+}

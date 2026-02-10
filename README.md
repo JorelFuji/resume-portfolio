@@ -19,3 +19,6 @@ yarn preview
 ## Docker
 docker build -t resume-portfolio .
 docker run --rm -p 8080:80 resume-portfolio
+
+> node 20.19.4
+> yarn 4.9.3
