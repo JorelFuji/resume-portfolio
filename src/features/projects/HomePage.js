@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+export default function HomePage() {
+    return (_jsxs("div", { className: "mx-auto max-w-6xl px-6", children: [_jsxs("section", { className: "pb-16", children: [_jsx(motion.h1, { initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, children: "Senior-level design work, presented like an exhibit." }), _jsx("p", { className: "mt-4 max-w-2xl text-muted", children: "Case studies with process, iterations, and impact \u2014 built with a real design system." })] }), _jsxs("section", { id: "projects", className: "grid gap-6 md:grid-cols-2", children: [_jsxs("div", { className: "rounded-xl border border-border p-6 bg-surface", children: [_jsx("h2", { children: "Featured Project" }), _jsx("p", { className: "mt-2 text-muted", children: "Add your hero image + story structure here." })] }), _jsxs("div", { className: "rounded-xl border border-border p-6 bg-surface", children: [_jsx("h2", { children: "Featured Project" }), _jsx("p", { className: "mt-2 text-muted", children: "Second case study." })] })] })] }));
+}
