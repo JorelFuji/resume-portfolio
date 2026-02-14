@@ -1,7 +1,7 @@
-import { Card } from "@/components/ui/card";
-import Section from '@/components/resume/blocks/Section'
-import TimelineItem from '@/components/resume/blocks/TimelineItem'
-import Tag from '@/components/resume/blocks/Tag'
+import { Card } from '@/components/ui/card';
+import Section from '@/components/resume/blocks/Section';
+import TimelineItem from '@/components/resume/blocks/TimelineItem';
+import Tag from '@/components/resume/blocks/Tag';
 
 export default function MainContent() {
   return (
@@ -12,9 +12,9 @@ export default function MainContent() {
           title="About"
           subtitle={
             <>
-              Platform/DevOps engineer focused on secure identity, automation, and reliable delivery.
-              I build boring systems that don’t fail at 2AM: CI/CD that’s predictable, access that’s auditable,
-              and platforms that are easy to operate.
+              Platform/DevOps engineer focused on secure identity, automation, and reliable
+              delivery. I build boring systems that don’t fail at 2AM: CI/CD that’s predictable,
+              access that’s auditable, and platforms that are easy to operate.
             </>
           }
         >
@@ -38,9 +38,9 @@ export default function MainContent() {
               location="Austin, TX"
               summary={
                 <>
-                  Own platform operations and identity workflows across developer tooling. Build repeatable
-                  onboarding and access patterns, tighten security controls, and document everything so teams
-                  move faster without breaking compliance.
+                  Own platform operations and identity workflows across developer tooling. Build
+                  repeatable onboarding and access patterns, tighten security controls, and document
+                  everything so teams move faster without breaking compliance.
                 </>
               }
               bullets={[
@@ -68,7 +68,7 @@ export default function MainContent() {
       </Card>
 
       {/* PROJECTS */}
-      <Card tone="default" interactive>
+      <Card tone="default">
         <Section
           title="Projects"
           subtitle="Selected work that demonstrates platform thinking, automation, and operational reliability."
@@ -76,16 +76,14 @@ export default function MainContent() {
           <div className="space-y-4">
             <div className="rounded-xl border border-zinc-800/70 bg-zinc-950/40 p-4 print:bg-white">
               <div className="flex flex-wrap items-baseline justify-between gap-3">
-                <h3 className="font-semibold text-zinc-100 print:text-zinc-900">
-                  TechOps Portal
-                </h3>
+                <h3 className="font-semibold text-zinc-100 print:text-zinc-900">TechOps Portal</h3>
                 <span className="text-xs text-zinc-400 print:text-zinc-600">
                   Internal tooling / documentation
                 </span>
               </div>
               <p className="mt-2 text-sm text-zinc-200 print:text-zinc-700">
-                Built a centralized portal for onboarding, SOPs, and ticket triage so teams can execute
-                consistent processes fast.
+                Built a centralized portal for onboarding, SOPs, and ticket triage so teams can
+                execute consistent processes fast.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Tag>Docs</Tag>
@@ -104,7 +102,8 @@ export default function MainContent() {
                 </span>
               </div>
               <p className="mt-2 text-sm text-zinc-200 print:text-zinc-700">
-                Implemented build/test/deploy stages with predictable outputs and secure secrets handling.
+                Implemented build/test/deploy stages with predictable outputs and secure secrets
+                handling.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Tag>GitHub Actions</Tag>
@@ -133,5 +132,5 @@ export default function MainContent() {
         </Section>
       </Card>
     </main>
-  )
+  );
 }

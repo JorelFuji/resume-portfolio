@@ -1,31 +1,29 @@
-import { Routes, Route, Navigate, useParams } from "react-router-dom"
+import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 
-import Navbar from "@/components/navigation/Navbar"
-import Hero from "@/components/sections/Hero"
-import Skills from "@/components/sections/Skills"
-import Projects from "@/components/sections/Projects"
-import Contact from "@/components/sections/Contact"
+import Navbar from '@/components/navigation/Navbar';
+import Docs from '@/components/sections/Docs';
+import HowIBuild from '@/components/sections/HowIBuild';
+import Metrics from '@/components/sections/Metrics';
 
-type Lang = "en" | "ja"
-const safeLang = (l?: string): Lang => (l === "ja" ? "ja" : "en")
+type Lang = 'en' | 'ja';
+const safeLang = (l?: string): Lang => (l === 'ja' ? 'ja' : 'en');
 
 function PortfolioPage({ lang }: { lang: Lang }) {
   return (
     <>
       <Navbar lang={lang} />
       <main>
-        <Hero lang={lang} />
-        <Skills lang={lang} />
-        <Projects lang={lang} />
-        <Contact lang={lang} />
+        <Docs lang="en" />
+        <HowIBuild lang="en" />
+        <Metrics lang="en" />
       </main>
     </>
-  )
+  );
 }
 
 function PortfolioRoute() {
-  const { lang } = useParams()
-  return <PortfolioPage lang={safeLang(lang)} />
+  const { lang } = useParams();
+  return <PortfolioPage lang={safeLang(lang)} />;
 }
 
 export default function App() {
@@ -35,5 +33,5 @@ export default function App() {
       <Route path="/:lang" element={<PortfolioRoute />} />
       <Route path="*" element={<Navigate to="/en" replace />} />
     </Routes>
-  )
+  );
 }
