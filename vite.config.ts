@@ -1,21 +1,13 @@
-// vite.config.ts
-import { defineConfig } from "vitest/config"
-import react from "@vitejs/plugin-react"
-import tailwindcss from "@tailwindcss/vite"
-import path from "node:path"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path' // You might need to install @types/node: yarn add -D @types/node
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-
+  plugins: [react()],
   resolve: {
     alias: {
+      // This maps the "@" symbol to your src folder
       "@": path.resolve(__dirname, "./src"),
     },
-  },
-
-  test: {
-    environment: "jsdom",
-    globals: true,
-    setupFiles: ["./src/test/setup.ts"],
   },
 })
