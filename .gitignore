@@ -22,4 +22,4 @@ dist
 .yarn/unplugged/
 
 # Logs
-*.log
+*.log.history/

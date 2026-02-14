@@ -1,14 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* your custom css below */
+/* your custom css below */
 /* Tailwind v4.1 CSS-first layers */
-@import "./styles/theme.css";
-@import "./styles/typography.css";
-@import "./styles/utilities.css";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-
+@import './styles/theme.css';
+@import './styles/typography.css';
+@import './styles/utilities.css';
 @custom-variant dark (&:is(.dark *));
-
+@import './styles/typography.css';
+@import './styles/utilities.css';
 /* =========================
    Global defaults
    ========================= */
